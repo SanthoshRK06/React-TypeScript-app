@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import colorReducer from "./features/display/colorModeSlice";
+import movieReducer from "./features/movies/movieSlice";
+
 
 export const store = configureStore({
     reducer: {
-        darkMode : colorReducer
+        darkMode : colorReducer,
+        movies : movieReducer
     },
 })
 
