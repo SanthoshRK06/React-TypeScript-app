@@ -46,6 +46,4 @@ const Header = () => {
 };
 
 export default Header;
-function useState(): [any, any] {
-  throw new Error("Function not implemented.");
-}
+
