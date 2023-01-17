@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { useFetch } from "../../hooks/storeHook";
 
-//Action
-
+//Actiony
 export const getMovies = createAsyncThunk(
   "movies/getMovies",
   async (data, thunkApi) => {
     try {
-      const response = await fetch(
+      const response = await useFetch(
         `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`
       );
       return await response.json();
