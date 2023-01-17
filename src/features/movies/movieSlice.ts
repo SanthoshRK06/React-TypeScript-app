@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { useFetch } from "../../hooks/storeHook";
 
-//Actiony
+//Action
 export const getMovies = createAsyncThunk(
   "movies/getMovies",
   async (data, thunkApi) => {
